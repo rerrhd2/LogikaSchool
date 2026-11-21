@@ -1,0 +1,126 @@
+/* Шрифт 1*/
+
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-bold {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+*{
+    font-family: "Tinos", serif;
+}
+/* Базові налаштування */
+body {
+    font-family: 'Tinos', sans-serif;
+    background-color: black;
+    color: #EACDC2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+/* Кнопки */
+button {
+    background: #692ECA;
+    color: #fff;
+    border: 1px solid #a78bfa;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 18px;
+    font-family: "Tinos", serif;
+    width: 230px;          /* фіксована ширина, розмір не залежить від шрифту */
+    white-space: nowrap;
+    box-shadow: 0 0 18px rgba(124, 58, 237, 0.6);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #A1B0AB;
+    color: #692ECA;
+    font-family: 'Unbounded', sans-serif;
+    box-shadow: 0 0 28px rgba(167, 139, 250, 0.9);
+    animation: fontSwap 0.35s ease;
+}
+
+@keyframes fontSwap {
+    0%   { letter-spacing: -2px; opacity: 0.6; }
+    100% { letter-spacing: 0;    opacity: 1; }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#answers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    height: 100px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.Logo {
+    font-family: "Gravitas One", serif;
+    color: #BEDCFE;
+}
+
+img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#IDK {
+    display: block;
+    width: fit-content;
+    margin: 75px auto 0;
+    padding: 10px 22px;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#IDK:hover {
+    color: #ffffff;
+    border-color: white;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+    background: rgba(168, 85, 247, 0.08);
+}
+
+/* Подсветка ответов должна быть в самом конце */
+button.correct {
+    background: #90ee90 !important;
+    color: #064e2b !important; /* темно-зелений текст на світло-зеленому фоні */
+    border-color: #4ade80 !important;
+    box-shadow: 0 0 22px rgba(74, 222, 128, 0.7) !important;
+}
+
+button.wrong {
+    background: rgb(189, 0, 0) !important;
+    color: white !important;
+}
